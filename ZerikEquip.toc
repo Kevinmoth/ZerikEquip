@@ -1,0 +1,8 @@
+## Interface: 30300
+## Author: Matecitos y Zerik
+## Title: ZerikEquip
+## Notes: Este es un addon para equipar personajes
+## SavedVariables: ZerikEquip
+## Version: 1.0
+
+ZerikEquip.lua
