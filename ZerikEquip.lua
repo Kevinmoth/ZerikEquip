@@ -14,7 +14,7 @@ FrameBorder:SetPoint("BOTTOMRIGHT", 5, -5)
 FrameBorder:SetBackdrop({
     bgFile = "Interface/Tooltips/UI-Tooltip-Background", 
     edgeFile = "Interface/Tooltips/UI-Tooltip-Border", 
-    edgeSize = 12, -- Tamaño del borde
+    edgeSize = 12,
     insets = { left = 3, right = 3, top = 3, bottom = 3 },
 })
 FrameBorder:SetBackdropColor(0, 0, 0, 1) 
@@ -26,13 +26,13 @@ Background:SetAllPoints(ZerikEquipFrame)
 Background:SetTexture(0, 0, 0, 0.8) 
 
 local Dropdown = CreateFrame("Frame", "ZerikEquipDropdown", ZerikEquipFrame, "UIDropDownMenuTemplate")
-Dropdown:SetPoint("TOPLEFT", ZerikEquipFrame, "TOPLEFT", 10, -18) -- Ajustamos la posición
+Dropdown:SetPoint("TOPLEFT", ZerikEquipFrame, "TOPLEFT", 10, -18) 
 UIDropDownMenu_SetWidth(Dropdown, 150)
 
--- Crea un objeto de texto para el título
+
 local TitleText = ZerikEquipFrame:CreateFontString(nil, "OVERLAY", "GameFontNormal")
-TitleText:SetPoint("TOP", 0, -5)  -- Ajusta la posición del título
-TitleText:SetText("ZerikEquip")  -- Establece el texto del título
+TitleText:SetPoint("TOP", 0, -5)
+TitleText:SetText("ZerikEquip")
 
 local comandos = {
     { nombre = "Paladin proteccion", comandos = { ".add 50640", ".add 50627", ".add 51269", ".add 50718", ".add 51265", ".add 50611", ".add 51267", ".add 50691", ".add 51268", ".add 54579", ".add 50622", ".add 50642", ".add 50364", ".add 54591", ".add 50738", ".add 50729", ".add 47661", ".setskill 44 400", ".setskill 172 400", ".setskill 173 400", ".setskill 54 400", ".setskill 160 400", ".setskill 136 400",".learn 23161" , ".setskill 473 400" } },
@@ -57,7 +57,7 @@ local comandos = {
 	{ nombre = "Brujo Afliccion", comandos = { ".learn 23161", ".add 51231", ".add 50658", ".add 51234", ".add 54583", ".add 51233", ".add 54582", ".add 51230", ".add 50613", ".add 50694", ".add 50699", ".add 50398", ".add 50664", ".add 50365", ".add 54588", ".add 50732", ".add 50719", ".add 50684", ".setskill 44 400", ".setskill 172 400", ".setskill 173 400", ".setskill 54 400", ".setskill 160 400", ".setskill 136 400", ".setskill 473 400", ".setskill 172", ".mod rep 1156 42999" } },
 	
     { nombre = "Druida Equilibrio", comandos = { ".learn 23161", ".add 51290", ".add 50724", ".add 51292", ".add 54583", ".add 51294", ".add 54584", ".add 54582", ".add 51291", ".add 50719", ".add 50457", ".add 50734", ".add 50613", ".add 50699", ".add 50636", ".add 50664", ".add 50365", ".add 54588", ".setskill 44 400", ".setskill 172 400", ".setskill 173 400", ".setskill 54 400", ".setskill 160 400", ".setskill 136 400", ".setskill 473 400", ".setskill 172", ".mod rep 1156 42999" } },
-    -- Agrega más comandos según sea necesario
+    
 }
 
 local function Dropdown_OnClick(self, arg1)
@@ -85,7 +85,7 @@ SendButton:SetScript("OnClick", function()
     local selectedCommands = ZerikEquipFrame.selectedCommands
     if selectedCommands then
         for _, command in ipairs(selectedCommands) do
-            SendChatMessage(command, "SAY") -- Cambia "SAY" al canal que desees
+            SendChatMessage(command, "SAY") 
         end
     end
 end)
@@ -100,7 +100,7 @@ HiddenErrorFrame:SetScript("OnEvent", function(self, event, messageType, message
         return -- No hacer nada con los errores Lua, simplemente ignorarlos
     else
        
-        DEFAULT_CHAT_FRAME:AddMessage(message, 1, 0, 0) -- Ajusta los colores según desees
+        DEFAULT_CHAT_FRAME:AddMessage(message, 1, 0, 0)
     end
 end)
 
