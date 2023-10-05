@@ -5,7 +5,6 @@ Características:
 - Interfaz de usuario intuitiva para seleccionar la clase a equipar.
 - Lista desplegable con comandos predefinidos.
 - Facilita la ejecución de comandos en el chat del juego.
-- Personalizable para agregar más comandos según sea necesario.
 
 Instrucciones de Uso:
 2. En el juego, escribe "/zerikequip" en el chat para abrir la interfaz del addon.
